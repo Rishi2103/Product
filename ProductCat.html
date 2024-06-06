@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - POS System</title>
+    <link rel="stylesheet" href="ProductCat.css">
+</head>
+<body>
+    <header>
+        <h1>Product Catalog</h1>
+        <nav>
+            <ul>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#apparel">Apparel</a></li>
+                <li><a href="#home-goods">Home Goods</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <section id="filter-section">
+            <input type="text" id="search-bar" placeholder="Search products...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="apparel">Apparel</option>
+                <option value="home-goods">Home Goods</option>
+                <option value="beauty">Beauty</option>
+            </select>
+        </section>
+        <section id="electronics" class="category">
+            <h2>Electronics</h2>
+            <article class="product" data-id="1">
+                <h3>Smartphone</h3>
+                <p class="description">Latest model with high-end features and sleek design.</p>
+                <p class="price">69,999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+            <article class="product" data-id="2">
+                <h3>Laptop</h3>
+                <p class="description">High-performance laptop suitable for gaming and professional work.</p>
+                <p class="price">1,29,999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+        </section>
+
+        <section id="apparel" class="category">
+            <h2>Apparel</h2>
+            <article class="product" data-id="3">
+                <h3>T-Shirt</h3>
+                <p class="description">100% cotton t-shirt available in various sizes and colors.</p>
+                <p class="price">999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+            <article class="product" data-id="4">
+                <h3>Jeans</h3>
+                <p class="description">Comfortable and stylish jeans for everyday wear.</p>
+                <p class="price">1999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+        </section>
+
+        <section id="home-goods" class="category">
+            <h2>Home Goods</h2>
+            <article class="product" data-id="5">
+                <h3>Blender</h3>
+                <p class="description">High-speed blender perfect for smoothies and shakes.</p>
+                <p class="price">3999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+            <article class="product" data-id="6">
+                <h3>Vacuum Cleaner</h3>
+                <p class="description">Powerful vacuum cleaner for all floor types.</p>
+                <p class="price">14,999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+        </section>
+
+        <section id="beauty" class="category">
+            <h2>Beauty</h2>
+            <article class="product" data-id="7">
+                <h3>Face Cream</h3>
+                <p class="description">Moisturizing face cream with natural ingredients.</p>
+                <p class="price">299 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+            <article class="product" data-id="8">
+                <h3>Perfume</h3>
+                <p class="description">Elegant and long-lasting fragrance for all occasions.</p>
+                <p class="price">999 Rs</p>
+                <button class="edit-product">Edit</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 POS System. All rights reserved.</p>
+    </footer>
+
+    <div id="update-product-form" style="display: none;">
+        <h2>Update Product</h2>
+        <form id="product-form">
+            <input type="hidden" id="product-id">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required>
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" rows="4" required></textarea>
+            <label for="product-price">Price:</label>
+            <input type="text" id="product-price" required>
+            <button type="submit">Update</button>
+            <button type="button" id="cancel-update">Cancel</button>
+        </form>
+    </div>
+
+    <script src="ProductCat.js"></script>
+</body>
+</html>

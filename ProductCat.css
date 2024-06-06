@@ -1,0 +1,197 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+nav{
+    display: flex;
+    flex: 2;
+    justify-content: right;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+footer nav ul {
+    display: inline-block;
+    margin: 0;
+}
+
+footer nav ul li {
+    margin-right: 1rem;
+}
+#filter-section{
+    display: flex;
+    justify-content: center;
+}
+#search-bar{
+    width: 80%;
+    font-size: medium;
+    padding: 7px;
+    border-radius: 5px;
+    border: solid #666 1px;
+}
+#category-filter{
+    font-size: medium;
+    padding: 7px;
+    border-radius: 5px;
+    margin-left:20px;
+}
+#update-product-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+#update-product-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#update-product-form label {
+    margin-top: 0.5em;
+}
+
+#update-product-form input,
+#update-product-form textarea {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#update-product-form button {
+    margin-top: 0.5em;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .product {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+    nav{
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .product {
+        padding: 0.5rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+}
